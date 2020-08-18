@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-18 10:13:43
- * @LastEditTime: 2020-08-18 15:08:36
+ * @LastEditTime: 2020-08-18 15:21:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /color/bin/color.dart
@@ -106,7 +106,7 @@ class CalculatorColor {
               0.0722 * rgbColorValue[2]) /
           255;
 
-      //若新色值的 luma 小于 0.2 则提高 luma
+      //若新色值的 luma 小于 0.88 则提高 luma
       if (_luma < 0.88) {
         rgbColorValue[0] = (rgbColorValue[0] * 0.88 / _luma).round();
         rgbColorValue[1] = (rgbColorValue[1] * 0.88 / _luma).round();
