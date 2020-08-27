@@ -18,11 +18,11 @@ Created from templates made available by Stagehand under a BSD-style
 ```
 luma = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 ```
-若 luma <= 0.4 则直接输出该值
+若 luma <= 0.4 则直接输出该 rgb 值
 
 若 luma > 0.4, 则先将书封颜色 rbg 转为 hsv，判断 s = s < 56 ? 56 : s，将新的 hsv 再转回 rgb，对新对色值再次计算 luma' 并判断 luma' > 0.4
 
-若 luma' <= 0.4 则输入该新的 rgb 值
+若 luma' <= 0.4 则输出该新的 rgb 值
 
 若 luma' > 0.4 则通过等比例缩小 r,g,b 的值降低 luma 大小，并输出该新的 rgb值
 
